@@ -10,12 +10,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneChange;
     }
 
     public void ChangeScene(int i)
     {
         SceneManager.LoadScene(i);
-        SceneManager.sceneLoaded += OnSceneChange;
     }
 
     public void OnSceneChange(Scene scene, LoadSceneMode mode)
