@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Ground
+  - Ramp
+  - Wall
+  - Bullet
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -13,14 +19,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Bullet
+  - Ground
+  - Ramp
+  - Wall
+  - Platform_Bounce
+  - Platform_Bomb
+  - Platform_Shift
   - 
   - 
   - 
