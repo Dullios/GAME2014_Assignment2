@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Bullet Related")]
+    public int MaxBullets;
+    public BulletType bulletType;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +33,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "MainGameScene":
                 FindObjectOfType<Button>().onClick.AddListener(delegate { ChangeScene(3); });
+                BulletManager.Instance().Init(MaxBullets, bulletType);
                 break;
             case "GameOverScene":
                 Button[] sceneButtons = FindObjectsOfType<Button>();

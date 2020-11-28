@@ -19,6 +19,7 @@ TagManager:
   - UI
   - 
   - 
+  - Player
   - Enemy
   - Bullet
   - Ground
@@ -27,7 +28,6 @@ TagManager:
   - Platform_Bounce
   - Platform_Bomb
   - Platform_Shift
-  - 
   - 
   - 
   - 
