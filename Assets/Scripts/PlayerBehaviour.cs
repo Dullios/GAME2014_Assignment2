@@ -25,11 +25,11 @@ public class PlayerBehaviour : MonoBehaviour
     public RampDirection rampDirection;
     public bool onRamp;
 
-    [Header("Player Stats")]
-    public int lives;
-    public int health;
-    public BarController healthBar;
-    public Animator livesHUD;
+    //[Header("Player Stats")]
+    //public int lives;
+    //public int health;
+    //public BarController healthBar;
+    //public Animator livesHUD;
 
     private Rigidbody2D m_rigidBody2D;
     private SpriteRenderer m_spriteRenderer;
@@ -75,11 +75,16 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void _LookAhead()
     {
+        Debug.DrawLine(transform.position, lookAheadPoint.position, Color.green);
         groundHit = Physics2D.Linecast(transform.position, lookAheadPoint.position, collisionGroundLayer);
 
         isGrounded = (groundHit) ? true : false;
 
-        Debug.DrawLine(transform.position, lookAheadPoint.position, Color.green);
+        if (m_animator.GetBool("isFalling") && isGrounded)
+        {
+            m_animator.SetTrigger("isLanding");
+            m_animator.SetBool("isFalling", false);
+        }
     }
 
     private bool isOnSlope()
@@ -121,7 +126,7 @@ public class PlayerBehaviour : MonoBehaviour
                     }
 
 
-                    m_animator.SetInteger("AnimState", (int)PlayerAnimationType.RUN);
+                    m_animator.SetInteger("MoveState", (int)PlayerAnimationType.RUN);
                 }
                 else if (joystick.Horizontal < -joystickHorizontalSensitivity)
                 {
@@ -137,11 +142,11 @@ public class PlayerBehaviour : MonoBehaviour
                         m_rigidBody2D.AddForce(Vector2.down * horizontalForce * 0.5f * Time.deltaTime);
                     }
 
-                    m_animator.SetInteger("AnimState", (int)PlayerAnimationType.RUN);
+                    m_animator.SetInteger("MoveState", (int)PlayerAnimationType.RUN);
                 }
                 else
                 {
-                    m_animator.SetInteger("AnimState", (int)PlayerAnimationType.IDLE);
+                    m_animator.SetInteger("MoveState", (int)PlayerAnimationType.IDLE);
                 }
             }
 
@@ -149,7 +154,7 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 // jump
                 m_rigidBody2D.AddForce(Vector2.up * verticalForce);
-                m_animator.SetInteger("AnimState", (int) PlayerAnimationType.JUMP);
+                m_animator.SetTrigger("isJumping");
                 isJumping = true;
             }
             else
@@ -159,7 +164,7 @@ public class PlayerBehaviour : MonoBehaviour
 
             if ((joystick.Vertical < -joystickVerticalSensitivity) && (!isCrouching))
             {
-                m_animator.SetInteger("AnimState", (int)PlayerAnimationType.CROUCH);
+                m_animator.SetInteger("MoveState", (int)PlayerAnimationType.CROUCH);
                 isCrouching = true;
             }
             else
@@ -169,39 +174,39 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    public void LoseLife()
-    {
-        lives -= 1;
+    //public void LoseLife()
+    //{
+    //    lives -= 1;
 
-        livesHUD.SetInteger("LivesState", lives);
+    //    livesHUD.SetInteger("LivesState", lives);
 
-        if (lives > 0)
-        {
-            health = 100;
-            healthBar.SetValue(health);
+    //    if (lives > 0)
+    //    {
+    //        health = 100;
+    //        healthBar.SetValue(health);
 
-            transform.position = spawnPoint.position;
-        }
-        else
-        {
-            SceneManager.LoadScene("End");
-        }
-    }
+    //        transform.position = spawnPoint.position;
+    //    }
+    //    else
+    //    {
+    //        SceneManager.LoadScene("End");
+    //    }
+    //}
 
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-        healthBar.SetValue(health);
+    //public void TakeDamage(int damage)
+    //{
+    //    health -= damage;
+    //    healthBar.SetValue(health);
 
-        if (health <= 0)
-            LoseLife();
-    }
+    //    if (health <= 0)
+    //        LoseLife();
+    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(15);
+            //TakeDamage(15);
         }
     }
 
@@ -210,12 +215,12 @@ public class PlayerBehaviour : MonoBehaviour
         // respawn
         if (other.gameObject.CompareTag("DeathPlane"))
         {
-            LoseLife();
+            //LoseLife();
         }
 
         if(other.gameObject.CompareTag("Bullet"))
         {
-            TakeDamage(10);
+            //TakeDamage(10);
         }
     }
 }

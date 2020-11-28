@@ -25,10 +25,10 @@ TagManager:
   - Ground
   - Ramp
   - Wall
+  - Platform
   - Platform_Bounce
   - Platform_Bomb
   - Platform_Shift
-  - 
   - 
   - 
   - 

@@ -6,7 +6,9 @@ using UnityEngine;
 public enum PlayerAnimationType 
 {
     IDLE,
+    CROUCH,
     RUN,
     JUMP,
-    CROUCH
+    FALL,
+    LAND
 }
