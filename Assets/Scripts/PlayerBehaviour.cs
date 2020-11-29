@@ -82,15 +82,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (m_animator.GetBool("isFalling") && isGrounded)
         {
-            m_animator.SetTrigger("isLanding");
+            m_animator.SetBool("isLanding", true);
             m_animator.SetBool("isFalling", false);
-        }
-
-        if(isGrounded && !isJumping && groundHit.collider.gameObject.layer == 15) // 15 is Platform_Bounce
-        {
-            m_rigidBody2D.AddForce(Vector2.up * verticalForce * 1.5f);
-            m_animator.SetTrigger("isJumping");
-            isJumping = true;
         }
     }
 
@@ -214,6 +207,15 @@ public class PlayerBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             //TakeDamage(15);
+        }
+
+        if (isGrounded && groundHit.collider.gameObject.layer == 15) // 15 is Platform_Bounce
+        {
+            m_rigidBody2D.AddForce(Vector2.up * verticalForce * 5.0f);
+            m_animator.SetTrigger("isJumping");
+            isJumping = true;
+
+            collision.gameObject.GetComponent<Animator>().SetBool("isBouncing", true);
         }
     }
 

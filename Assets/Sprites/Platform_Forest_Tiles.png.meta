@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 7e3bb753829cb2348be2ea5094e0bbc1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8602581610569717696
+    second: Bounce_Large_Platform_0
+  - first:
+      213: -6399863085917264184
+    second: Bounce_Large_Platform_1
+  - first:
+      213: 2401396503342215081
+    second: Bounce_Large_Platform_2
+  - first:
+      213: 4188936053772349596
+    second: Bounce_Large_Platform_3
+  - first:
+      213: 7376281462935787808
+    second: Bounce_Small_Platform_0
+  - first:
+      213: 8990413289999665417
+    second: Bounce_Small_Platform_1
+  - first:
+      213: -8881309787323981304
+    second: Bounce_Small_Platform_2
+  - first:
+      213: 5728159348112223471
+    second: Bounce_Small_Platform_3
+  - first:
+      213: 7319782169929520959
+    second: Bomb_Platform_0
+  - first:
+      213: -7428817059378921847
+    second: Bomb_Platform_1
+  - first:
+      213: 4038832934986484468
+    second: Bomb_Platform_2
+  - first:
+      213: 8517923841414344651
+    second: Bomb_Platform_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,14 +77,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -123,7 +159,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Bounce_Large_Platform_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 258
+        width: 80
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0482fa68a9d7d9880800000000000000
+      internalID: -8602581610569717696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bounce_Large_Platform_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 228
+        width: 80
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c624c86e6e1f27a0800000000000000
+      internalID: -6399863085917264184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bounce_Large_Platform_2
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 283
+        width: 80
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afe39a8569735120800000000000000
+      internalID: 2401396503342215081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bounce_Large_Platform_3
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 307
+        width: 80
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c907def9527122a30800000000000000
+      internalID: 4188936053772349596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bounce_Small_Platform_0
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 258
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0291699c8e0dd5660800000000000000
+      internalID: 7376281462935787808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bounce_Small_Platform_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 231
+        width: 48
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9098166014d54cc70800000000000000
+      internalID: 8990413289999665417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bounce_Small_Platform_2
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 282
+        width: 48
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802aa5abdcf3fb480800000000000000
+      internalID: -8881309787323981304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bounce_Small_Platform_3
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 308
+        width: 48
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fecef09f3928e7f40800000000000000
+      internalID: 5728159348112223471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Platform_0
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 362
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3713e70a17159560800000000000000
+      internalID: 7319782169929520959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Platform_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 345
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e7b5a7e3a87e890800000000000000
+      internalID: -7428817059378921847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Platform_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 328
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa840dd721dc0830800000000000000
+      internalID: 4038832934986484468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Platform_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 311
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf25579a9eb53670800000000000000
+      internalID: 8517923841414344651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
