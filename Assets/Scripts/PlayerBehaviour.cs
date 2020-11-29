@@ -48,7 +48,7 @@ public class PlayerBehaviour : MonoBehaviour
     void FixedUpdate()
     {
         _LookInFront();
-        _LookAhead();
+        _LookDown();
         _Move();
     }
 
@@ -73,7 +73,7 @@ public class PlayerBehaviour : MonoBehaviour
         Debug.DrawLine(transform.position, lookInFrontPoint.position, Color.red);
     }
 
-    private void _LookAhead()
+    private void _LookDown()
     {
         Debug.DrawLine(transform.position, lookAheadPoint.position, Color.green);
         groundHit = Physics2D.Linecast(transform.position, lookAheadPoint.position, collisionGroundLayer);
@@ -84,6 +84,13 @@ public class PlayerBehaviour : MonoBehaviour
         {
             m_animator.SetTrigger("isLanding");
             m_animator.SetBool("isFalling", false);
+        }
+
+        if(isGrounded && !isJumping && groundHit.collider.gameObject.layer == 15) // 15 is Platform_Bounce
+        {
+            m_rigidBody2D.AddForce(Vector2.up * verticalForce * 1.5f);
+            m_animator.SetTrigger("isJumping");
+            isJumping = true;
         }
     }
 
@@ -135,7 +142,7 @@ public class PlayerBehaviour : MonoBehaviour
                     transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
                     if (onRamp && rampDirection == RampDirection.UP)
                     {
-                        m_rigidBody2D.AddForce(Vector2.up * horizontalForce * 0.5f * Time.deltaTime);
+                        m_rigidBody2D.AddForce(Vector2.up * horizontalForce * 1.0f * Time.deltaTime);
                     }
                     else if (onRamp && rampDirection == RampDirection.DOWN)
                     {

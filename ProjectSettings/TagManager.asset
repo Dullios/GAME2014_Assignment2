@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Bullet
   - Platform
+  - Death Floor
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - Platform_Bounce
   - Platform_Bomb
   - Platform_Shift
-  - 
+  - Death_Floor
   - 
   - 
   - 
