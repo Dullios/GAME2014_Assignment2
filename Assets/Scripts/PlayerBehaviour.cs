@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    public UnityEvent OnJump;
+
     [Header("Controls")]
     public Joystick joystick;
     public float joystickHorizontalSensitivity;
@@ -156,6 +159,7 @@ public class PlayerBehaviour : MonoBehaviour
                 m_rigidBody2D.AddForce(Vector2.up * verticalForce);
                 m_animator.SetTrigger("isJumping");
                 isJumping = true;
+                OnJump.Invoke();
             }
             else
             {
@@ -209,13 +213,17 @@ public class PlayerBehaviour : MonoBehaviour
             //TakeDamage(15);
         }
 
-        if (isGrounded && groundHit.collider.gameObject.layer == 15) // 15 is Platform_Bounce
+        if (isGrounded && groundHit.collider.gameObject.layer == 15) // Platform_Bounce layer
         {
             m_rigidBody2D.AddForce(Vector2.up * verticalForce * 5.0f);
             m_animator.SetTrigger("isJumping");
             isJumping = true;
 
             collision.gameObject.GetComponent<Animator>().SetBool("isBouncing", true);
+        }
+        else if (isGrounded && groundHit.collider.gameObject.layer == 16) // Platform_Bomb layer
+        {
+            collision.gameObject.GetComponent<BombPlatformBehaviour>().Countdown();
         }
     }
 
@@ -230,6 +238,11 @@ public class PlayerBehaviour : MonoBehaviour
         if(other.gameObject.CompareTag("Bullet"))
         {
             //TakeDamage(10);
+        }
+
+        if(other.gameObject.CompareTag("Platform"))
+        {
+            //TakeDamage(20);
         }
     }
 }
