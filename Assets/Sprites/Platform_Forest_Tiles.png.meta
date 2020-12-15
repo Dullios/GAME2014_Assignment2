@@ -38,6 +38,33 @@ TextureImporter:
   - first:
       213: 8517923841414344651
     second: Bomb_Platform_3
+  - first:
+      213: -3245345355350694999
+    second: Platform_Switch_0
+  - first:
+      213: -7360373054099331744
+    second: Platform_Switch_1
+  - first:
+      213: 6113468766690939885
+    second: Platform_Switch_2
+  - first:
+      213: -8247190890061878706
+    second: Platform_Switch_3
+  - first:
+      213: -262526694652090726
+    second: Platform_Switch_4
+  - first:
+      213: -1626403392837235065
+    second: Platform_Switch_5
+  - first:
+      213: -3872348548493682072
+    second: Platform_Switch_6
+  - first:
+      213: -5267079535906505531
+    second: Platform_Switch_7
+  - first:
+      213: 3378602371071972388
+    second: Platform_Switch_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -84,7 +111,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -408,6 +435,195 @@ TextureImporter:
       bones: []
       spriteID: bcf25579a9eb53670800000000000000
       internalID: 8517923841414344651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform_Switch_0
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 247
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3abd8089736f2d0800000000000000
+      internalID: -3245345355350694999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform_Switch_1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 247
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0656d0844b3bad990800000000000000
+      internalID: -7360373054099331744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform_Switch_2
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 247
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de31f08e37767d450800000000000000
+      internalID: 6113468766690939885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform_Switch_3
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 230
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a260bb4971c8d80800000000000000
+      internalID: -8247190890061878706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform_Switch_4
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 230
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a966435bc515b5cf0800000000000000
+      internalID: -262526694652090726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform_Switch_5
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 230
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e42743bbadd69e0800000000000000
+      internalID: -1626403392837235065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform_Switch_6
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 213
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ad8800387a24ac0800000000000000
+      internalID: -3872348548493682072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform_Switch_7
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 213
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc309a711397e6b0800000000000000
+      internalID: -5267079535906505531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform_Switch_8
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 213
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4249905b4f433ee20800000000000000
+      internalID: 3378602371071972388
       vertices: []
       indices: 
       edges: []
