@@ -234,8 +234,9 @@ public class PlayerBehaviour : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // respawn
-        if (other.gameObject.CompareTag("DeathPlane"))
+        if (other.gameObject.CompareTag("Death Floor"))
         {
+            transform.position = spawnPoint.position;
             //LoseLife();
         }
 
