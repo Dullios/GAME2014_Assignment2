@@ -215,7 +215,11 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (isGrounded && groundHit.collider.gameObject.layer == 15) // Platform_Bounce layer
         {
-            m_rigidBody2D.AddForce(Vector2.up * verticalForce * 5.0f);
+            m_rigidBody2D.AddForce(Vector2.up * verticalForce * 3.0f);
+            if(transform.localScale.x < 0)
+                m_rigidBody2D.AddForce(Vector2.left * horizontalForce * 0.2f);
+            else
+                m_rigidBody2D.AddForce(Vector2.right * horizontalForce * 0.2f);
             m_animator.SetTrigger("isJumping");
             isJumping = true;
 
