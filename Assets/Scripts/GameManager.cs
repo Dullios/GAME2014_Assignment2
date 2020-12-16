@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
                 FindObjectOfType<Button>().onClick.AddListener(delegate { ChangeScene(0); });
                 break;
             case "MainGameScene":
-                FindObjectOfType<Button>().onClick.AddListener(delegate { ChangeScene(3); });
                 BulletManager.Instance().Init(MaxBullets, bulletType);
                 break;
             case "GameOverScene":
