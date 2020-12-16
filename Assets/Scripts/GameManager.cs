@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public int MaxBullets;
     public BulletType bulletType;
 
+    [Header("Score")]
+    public int score = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene(int i)
     {
+        if (i == 2)
+            score = 0;
         SceneManager.LoadScene(i);
     }
 

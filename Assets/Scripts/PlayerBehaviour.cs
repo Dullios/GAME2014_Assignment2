@@ -28,11 +28,11 @@ public class PlayerBehaviour : MonoBehaviour
     public RampDirection rampDirection;
     public bool onRamp;
 
-    //[Header("Player Stats")]
-    //public int lives;
-    //public int health;
-    //public BarController healthBar;
-    //public Animator livesHUD;
+    [Header("Player Stats")]
+    public int lives;
+    public int health;
+    public BarController healthBar;
+    public GameObject livesHUD;
 
     private Rigidbody2D m_rigidBody2D;
     private SpriteRenderer m_spriteRenderer;
@@ -178,39 +178,44 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    //public void LoseLife()
-    //{
-    //    lives -= 1;
+    public void LoseLife()
+    {
+        lives -= 1;
 
-    //    livesHUD.SetInteger("LivesState", lives);
+        livesHUD.transform.GetChild(lives).gameObject.SetActive(false);
 
-    //    if (lives > 0)
-    //    {
-    //        health = 100;
-    //        healthBar.SetValue(health);
+        if (lives > 0)
+        {
+            health = 100;
+            healthBar.SetValue(health);
 
-    //        transform.position = spawnPoint.position;
-    //    }
-    //    else
-    //    {
-    //        SceneManager.LoadScene("End");
-    //    }
-    //}
+            Respawn();
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
+    }
 
-    //public void TakeDamage(int damage)
-    //{
-    //    health -= damage;
-    //    healthBar.SetValue(health);
+    public void Respawn()
+    {
+        transform.position = spawnPoint.position;
+    }
 
-    //    if (health <= 0)
-    //        LoseLife();
-    //}
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        healthBar.SetValue(health);
+
+        if (health <= 0)
+            LoseLife();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            //TakeDamage(15);
+            TakeDamage(15);
         }
 
         if (isGrounded && groundHit.collider.gameObject.layer == 15) // Platform_Bounce layer
@@ -236,18 +241,17 @@ public class PlayerBehaviour : MonoBehaviour
         // respawn
         if (other.gameObject.CompareTag("Death Floor"))
         {
-            transform.position = spawnPoint.position;
-            //LoseLife();
+            LoseLife();
         }
 
         if(other.gameObject.CompareTag("Bullet"))
         {
-            //TakeDamage(10);
+            TakeDamage(10);
         }
 
         if(other.gameObject.CompareTag("Platform"))
         {
-            //TakeDamage(20);
+            TakeDamage(20);
         }
     }
 }

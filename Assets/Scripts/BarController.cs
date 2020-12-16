@@ -22,7 +22,7 @@ public class BarController : MonoBehaviour
     {
         if(entity != null)
         {
-            transform.position = entity.position + new Vector3(0, 0.8f, 0);
+            transform.position = entity.position + new Vector3(0, 1.0f, 0);
         }
     }
 

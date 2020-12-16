@@ -11,6 +11,7 @@ TagManager:
   - Bullet
   - Platform
   - Death Floor
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - Platform_Bomb
   - Platform_Shift
   - Death_Floor
-  - 
+  - Checkpoint
   - 
   - 
   - 

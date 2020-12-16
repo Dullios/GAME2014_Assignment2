@@ -91,7 +91,7 @@ TextureImporter:
     second: Landing_Kirby_5
   - first:
       213: -7076295448755535857
-    second: Animal_Kirby_29
+    second: Animal_Kirby_Life
   - first:
       213: -4792015634435774239
     second: Animal_Kirby_30
@@ -1764,6 +1764,27 @@ TextureImporter:
       bones: []
       spriteID: 9626eecc7c9ffe050800000000000000
       internalID: 5832154679000064617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Kirby_Life
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 82
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00863bf7c2fbcd90800000000000000
+      internalID: -7076295448755535857
       vertices: []
       indices: 
       edges: []

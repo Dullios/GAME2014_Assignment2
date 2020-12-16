@@ -6,6 +6,7 @@ public class BombPlatformBehaviour : MonoBehaviour
 {
     private Animator anim;
     private SpriteRenderer spriteRenderer;
+    private BoxCollider2D boxCollider;
     private int countdown;
     public int respawnTime;
 
@@ -14,6 +15,7 @@ public class BombPlatformBehaviour : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider = GetComponent<BoxCollider2D>();
         countdown = 4;
     }
 
@@ -22,9 +24,13 @@ public class BombPlatformBehaviour : MonoBehaviour
         countdown--;
         anim.SetInteger("BombTimer", countdown);
 
+        if (countdown == 0)
+            boxCollider.isTrigger = true;
+
         if (countdown < 0)
         {
             spriteRenderer.enabled = false;
+            boxCollider.enabled = false;
             countdown = 4;
             StartCoroutine(RespawnRoutine());
         }
@@ -37,5 +43,7 @@ public class BombPlatformBehaviour : MonoBehaviour
             countdown = 4;
         anim.SetInteger("BombTimer", countdown);
         spriteRenderer.enabled = true;
+        boxCollider.isTrigger = false;
+        boxCollider.enabled = true;
     }
 }
